@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>join</title>
+    <link rel="stylesheet" href="/css/SignUp.css" />
+</head>
+<body>
+<!-- 상단바 고정 (재용) -->
+<div id="headerAreaId"></div>
+
+<!-- 헤드라인 -->
+<div class="all-page">
+    <div class="head-join-both">
+        <span class="head-join-text">회원가입</span>
+        <span class="head-required-text"><span class="required-star">*</span> 필수입력사항</span>
+    </div>
+
+    <!-- 개인정보 입력 칸 (테이블) -->
+    <form th:action="@{/signup}" method="post" th:object="${signUpDTO}">
+        <table class="join-table">
+            <tr>
+                <td><label for="userId">아이디<span class="required-star">*</span></label></td>
+                <td><input th:field="*{userId}" type="text" id="userId" />(영문소문자/숫자, 4~16자)</td>
+            </tr>
+            <tr>
+                <td><label for="password">비밀번호<span class="required-star">*</span></label></td>
+                <td><input th:field="*{userPwd}" type="password" id="password" />(영문 대소문/숫자/특수문자 중 2가지 이상 조합, 8~16자)</td>
+            </tr>
+            <tr>
+                <td><label for="passwordConfirm">비밀번호 확인<span class="required-star">*</span></label></td>
+                <td><input type="password" id="passwordConfirm" name="passwordConfirm" /></td>
+            </tr>
+            <tr>
+                <td><label for="name">이름<span class="required-star">*</span></label></td>
+                <td><input th:field="*{userName}" type="text" id="name"/></td>
+            </tr>
+            <tr>
+                <td><label for="birthDate">생일<span class="required-star">*</span></label></td>
+                <td>
+                    <input th:field="*{userBirth}"  type="date" id="birthDate" />
+                </td>
+            </tr>
+            <tr>
+                <td><label for="userPhone">휴대전화<span class="required-star">*</span></label></td>
+                <td><input th:field="*{userPhone}" type="tel" id="userPhone" /></td>
+            </tr>
+            <tr>
+                <td><label for="email">이메일<span class="required-star">*</span></label></td>
+                <td><input th:field="*{userEmail}" type="email" id="email" /></td>
+            </tr>
+        </table>
+
+        <!-- 회원가입 버튼 -->
+        <div class="submit-btn">
+            <input type="submit" value="회원가입" />
+        </div>
+
+        <!-- 약관 동의 칸 -->
+        <div class="terms-section">
+            <div class="terms-title-both">
+                <span class="terms-title">1. [필수] 이용약관 동의</span>
+                <label><input type="checkbox" id="allAgree" /> 전체 약관 동의</label>
+            </div>
+            <div class="terms-box">
+                제1조 (목적) <br />본 약관은 로또집(이하 “회사”)이 제공하는 서비스의
+                이용과 관련하여 회사와 회원 간의 권리, 의무 및 책임사항, 기타 필요한
+                사항을 규정함을 목적으로 합니다. <br />제2조 (회원가입) <br />회원은
+                본 약관에 동의하고 정해진 절차에 따라 회원가입을 완료한 후, 회사가
+                제공하는 모든 서비스를 이용할 수 있습니다. <br />제3조 (서비스 내용)
+                <br />로또집은 로또 번호 추천, 통계 분석, 당첨 결과 제공 등 로또
+                관련 정보를 기반으로 한 다양한 서비스를 제공합니다. 회사는 서비스의
+                종류나 내용을 변경할 수 있으며, 그 경우 사전에 회원에게 고지합니다.
+                <br />제4조 (회원의 의무) <br />회원은 다음 각 호에 해당하는 행위를
+                해서는 안 됩니다.<br />- 타인의 정보 도용 <br />- 회사의 서비스를
+                방해하거나 부정한 방법으로 이용 <br />- 법령 또는 공서양속에
+                위반되는 행위 <br />- 기타 회사가 부적절하다고 판단하는 행위
+                <br />제5조 (계약 해지 및 이용 제한) <br />회사는 회원이 약관을
+                위반한 경우, 사전 통지 없이 서비스 이용을 제한하거나 회원 자격을
+                박탈할 수 있습니다. <br />이로 인해 회원에게 발생한 손해에 대하여
+                회사는 고의 또는 중대한 과실이 없는 한 책임을 지지 않습니다.
+                <br />회원은 언제든지 고객센터를 통해 이용 계약을 해지할 수 있으며,
+                계약 해지 시 관련 법령 및 개인정보처리방침에 따라 회원 정보는
+                처리됩니다. <br />제6조 (약관의 변경)<br />
+                회사는 필요한 경우 관련 법령을 위배하지 않는 범위 내에서 본 약관을
+                변경할 수 있습니다. <br />약관이 변경되는 경우, 회사는 변경 내용을
+                적용일 7일 전부터 서비스 내 공지사항을 통해 공지합니다. <br />단,
+                회원에게 불리한 내용의 변경일 경우에는 적용일 30일 전부터 공지하며,
+                이메일 등 개별 통지를 추가로 시행합니다. <br />회원이 변경된 약관에
+                동의하지 않을 경우, 이용 계약을 해지할 수 있으며, 변경된 약관의 효력
+                발생일 이후에도 서비스를 계속 이용하는 경우에는 변경 약관에 동의한
+                것으로 간주합니다. <br />제7조 (준거법 및 재판관할)<br />
+                본 약관은 대한민국 법률에 따라 해석되며, 회사와 회원 간 발생한
+                분쟁에 대해서는 민사소송법상의 관할 법원에 제소합니다.
+            </div>
+            <div class="agree-line">
+                <label>이용약관에 동의하십니까? <input type="checkbox" class="agreeChk" /></label>
+                <span>동의함</span>
+            </div>
+        </div>
+
+        <div class="terms-section">
+            <span class="terms-title">2. [필수] 개인정보 수집 및 이용 동의</span>
+            <div class="terms-box">
+                로또집은 「개인정보 보호법」에 따라 회원의 개인정보를 안전하게
+                관리하며, 아래와 같은 범위 내에서 개인정보를 수집 및 이용합니다.
+                <br />1) 수집 항목 필수: 이름, 이메일, 비밀번호, 휴대전화번호
+                <br />2) 수집 목적 <br />
+                - 회원가입 및 본인 확인 서비스 제공 및 고객 관리 <br />- 로또 당첨
+                결과 제공 및 분석 자료 전송 <br />- 고객 문의 응대 및 공지사항 전달
+                <br />3)보유 및 이용 기간 회원 탈퇴 시까지 보관 <br />- 관련 법령에
+                따라 일정 기간 보존 (예: 전자상거래법상 계약 및 결제 기록 5년)
+                <br />- 동의 거부 시 불이익 회원은 개인정보 수집 및 이용에 대한
+                동의를 거부할 권리가 있습니다. <br />다만, 필수 개인정보의 수집 및
+                이용에 동의하지 않을 경우 회원가입이 제한되거나 서비스 이용에 제한이
+                있을 수 있습니다. <br />회사는 개인정보 보호법 등 관련 법령을
+                준수하여 회원의 개인정보를 안전하게 관리하며, 개인정보와 관련된
+                문의는 고객센터를 통해 언제든지 하실 수 있습니다.
+            </div>
+            <div class="agree-line">
+                <label>개인정보 수집 및 이용에 동의하십니까? <input type="checkbox" class="agreeChk" /></label>
+                <span>동의함</span>
+            </div>
+        </div>
+
+        <div class="terms-section">
+            <span class="terms-title">3. [선택] 개인정보 수집 및 이용 동의</span>
+            <div class="terms-box">
+                로또집은 회원에게 맞춤형 혜택 및 이벤트 정보를 제공하기 위해 마케팅
+                활용에 대한 동의를 요청합니다. <br />1) 수신 항목 이메일,
+                문자메시지(SMS), 앱 푸시(Push) <br />2) 활용 목적 이벤트, 프로모션,
+                혜택 안내 로또 분석 리포트, 당첨 예측 정보 제공 <br />3) 동의 거부
+                시 불이익 거부해도 서비스 이용에 제한은 없으나, 최신 혜택 및 정보를
+                받지 못할 수 있습니다.
+            </div>
+            <div class="agree-line">
+                <label>마케팅 정보 수신(이메일, 문자 등)에 동의하십니까? <input type="checkbox" class="agreeChk" /></label>
+                <span>동의함</span>
+            </div>
+        </div>
+    </form>
+</div>
+
+<!-- 스크립트는 body 맨 아래에 위치시키는게 좋음 -->
+<script src="/js/SignUp.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,173 @@
+body {
+}
+
+.all-page {
+    max-width: 800px; /* 너비 제한 */
+    margin: 0 auto; /* 위아래는 0, 좌우는 오토로 설정해서 좌우 가운데 정렬 */
+    padding: 20px;
+}
+
+.required-star {
+    color: blue;
+    font-size: 13px;
+}
+
+.head-join-both {
+    display: flex;
+    justify-content: space-between; /* 좌우 끝 정렬 */
+    /* align-items: center;  */ /* 세로 가운데 정렬 */
+    width: 100%;
+    /* margin: 0 auto 20px auto; 가운데 정렬 + 아래 간격 */
+}
+.head-join-text {
+    font-size: 15px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.head-required-text {
+    font-size: 11px;
+    margin-bottom: 20px;
+    text-align: right;
+    margin: 5px;
+}
+
+.join-table {
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    border: 1px solid rgb(231, 231, 231);
+}
+
+.join-table td {
+    border: 1px solid rgb(231, 231, 231);
+    padding: 12px 10px; /* 위 아래 */
+    height: 64px;
+    width: 842px;
+}
+
+.join-table td:first-child {
+    background-color: rgb(231, 231, 231);
+    font-size: 15px;
+    width: 170px;
+    text-align: center;
+}
+
+/* 여기부터 다시 ck */
+.join-table input[type='text'],
+.join-table input[type='password'] {
+    border: 1px solid rgb(231, 231, 231);
+    padding: 5px 8px;
+    /* width: 250px; */
+    height: 30px;
+    font-size: 11px;
+}
+
+.join-table input[size='4'] {
+    width: 60px !important;
+    height: 30px;
+    text-align: center;
+    font-size: 11px;
+    border: 1px solid rgb(231, 231, 231);
+}
+
+.join-table td:nth-child(2) {
+    font-size: 11px;
+}
+
+.join-table td:nth-child(2) input {
+    width: auto;
+    margin-right: 5px;
+    border: 1px solid rgb(231, 231, 231);
+}
+
+input[type='submit'],
+button[type='submit'] {
+    width: 140px;
+    height: 35px;
+    background-color: #3b3b3b;
+    color: #fff;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    /* margin-top: 10px; */
+}
+
+.submit-btn {
+    text-align: center;
+    margin-top: 30px;
+}
+
+input[type='submit']:hover,
+button[type='submit']:hover {
+    background-color: #515151;
+}
+
+.join-table input[type='text'],
+.join-table input[type='password'],
+.join-table input[type='email'] {
+    font-size: 11px;
+    height: 36px;
+    padding: 8px 48px; /* 좌우 패딩 적당히 조절 */
+    /* width: 250px;  */ /* 박스 크기 키움 */
+    box-sizing: border-box; /* 패딩 포함한 전체 너비 계산 */
+}
+
+/* 약관 영역 */
+.terms-section {
+    /*margin-top: 50px;*/
+    width: 900px;
+    font-size: 11px;
+    line-height: 1.5;
+    width: 765px;
+}
+
+.terms-title-both {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.terms-title {
+    font-weight: 700;
+    font-size: 15px;
+    /* display: block; */
+    /* margin-bottom: 8px; */
+}
+
+.terms-section label {
+    font-size: 12px;
+    display: inline-flex;
+    /* align-items: center; */
+    margin-top: 10px;
+}
+
+.terms-section label input[type='checkbox'] {
+    margin-right: 3px;
+}
+
+.terms-box {
+    border: 1px solid rgb(231, 231, 231);
+    background: rgb(231, 231, 231);
+    height: 140px;
+    overflow-y: scroll;
+    padding: 10px;
+    margin-top: 5px;
+    /* white-space: pre-wrap; */
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+.agree-line {
+    text-align: right;
+}
+
+.agree-line input[type='checkbox'] {
+    margin-left: 5px; /* 텍스트와 체크박스 사이 띄우기 */
+}
+#birthDate{
+    font-size: 11px;
+    height: 36px;
+    padding: 8px 48px;
+    /* width: 250px; */
+    box-sizing: border-box;
+}

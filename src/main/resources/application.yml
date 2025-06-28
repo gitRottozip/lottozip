@@ -1,0 +1,31 @@
+server:
+  port: 8080 #??? ??? ?? ??
+
+# ?????? ?? ??
+Spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/lottozipdb?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Seoul
+    username: lottozip
+    password: Ro9wkd27!
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+#jpa ?? ??
+  jpa:
+    hibernate:
+      ddl-auto: update  # ?? create, none, validate ?
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+
+#spring mvc? ? ??
+  mvc:
+    view:
+      prefix: /WEB-INF/views/
+      suffix: .jsp
+
+logging:
+    level:
+      org.hibernate.SQL: DEBUG
+      org.hibernate.type.descriptor.sql.BasicBinder: TRACE

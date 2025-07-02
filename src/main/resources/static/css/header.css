@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.headerArea {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FFFF;
+    border-bottom: 1px solid #C2C2C2;
+    width: 100%;
+    height: 15vh;
+}
+
+.left {
+    width: 100%;
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logoArea {
+    display: flex;
+    justify-content: flex-end;
+    width: 13%;
+}
+
+.logo {
+    width: 169px;
+    height: 5.566vh;
+}
+
+.textArea {
+    margin-top: 15px;
+    width: 280px;
+    height: 3.42vh;
+    display: flex;
+    gap: 0px;
+}
+
+.textBox {
+    width: 80%;
+    height: 100%;
+    border: none;
+    padding-left: 10px;
+    background-color: rgba(194, 194, 194, 0.2);
+    opacity: 1;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.textBox::placeholder {
+    color: #C2C2C2;
+    opacity: 5;
+}
+
+.btn {
+    border: none;
+    background-color: rgba(194, 194, 194, 0.2);
+    padding-right: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    width: 35px;
+}
+
+.alarm {
+    display: flex;
+    margin-top: 15px;
+    height: 3.42vh;
+    width: 60px;
+}
+
+.alarmCount {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border: none;
+    width: 50%;
+}
+
+.alarmBtn {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border: none;
+    width: 50%;
+}
+
+.textAndAlarm {
+    width: 10%;
+    display: flex;
+    align-items: center;
+    gap: 0px;
+    width: fit-content;
+}
+
+.lotto-wrapper {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.lotto-ball {
+    display: inline-flex;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.yellow { background-color: #f9ce00; color: black; }
+.blue   { background-color: #1c6dd0; }
+.red    { background-color: #ea4335; }
+.gray   { background-color: #bdbdbd; color: black; }
+.green  { background-color: #34a853; }
+
+.right{
+    margin-top: 15px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: flex-end;
+    width: fit-content;
+}
+
+.rightNav{
+    display: flex;
+    gap:20px;
+}
+.shop, .bestShop{
+    color: #393939;
+    white-space: nowrap;
+}
+.bestShop{
+    margin-right: 30px;
+}

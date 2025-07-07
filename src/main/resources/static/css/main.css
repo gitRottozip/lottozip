@@ -1,0 +1,21 @@
+body {
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#headerAreaId {
+    height: 15vh;
+}
+
+.mainContent {
+    display: flex;
+    height: 85vh; /* 헤더를 제외한 나머지 공간 */
+}
+
+
+#map {
+    flex-grow: 1;
+    height: 100%;
+    width: 100%;
+}

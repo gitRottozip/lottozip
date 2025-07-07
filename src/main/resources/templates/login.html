@@ -3,8 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="/css/login.css">
 </head>
 <body>
-<h1>로그인페이지</h1>
+<div id="headerAreaId"></div>
+<div class="wrapper">
+<div class="bigContainer">
+    <div>
+        <a href="main.html"><img src="/img/logo.png" alt="logo"></a>
+    </div>
+    <form th:action="@{/login}" method="post">
+        <div class="idPwdContainer">
+            <input class="idPwdBox" type="text" name="username" placeholder="아이디">
+            <input class="idPwdBox" type="password" name="password" placeholder="비밀번호">
+            <div class="loginBtnContainer">
+                <input id="loginBtn" type="submit" value="로그인">
+            </div>
+            <div class="btnPack">
+                <input class="btnStyle" type="button" value="아이디 찾기">
+                <p class="boundary">|</p>
+                <input class="btnStyle" type="button" value="비밀번호 찾기">
+                <p class="boundary">|</p>
+                <input class="btnStyle" type="button" value="회원가입" onclick="location.href='/signup'">
+            </div>
+        </div>
+    </form>
+</div>
+</div>
+<script src="/js/login.js"></script>
 </body>
 </html>

@@ -1,10 +1,7 @@
 package hello.lottozip.user.entity;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.util.Date;
 
@@ -14,6 +11,7 @@ import java.util.Date;
 @AllArgsConstructor
 @Entity
 @Table(name = "user")
+@ToString
 public class User {
     @Id
     @Column(name = "user_id")
@@ -26,6 +24,7 @@ public class User {
     private String userPwd;
 
     @Column(name = "user_birth")
+    @Temporal(TemporalType.DATE)
     private Date userBirth;
 
     @Column(name = "user_phone")
@@ -37,14 +36,4 @@ public class User {
 
     @Column(name = "user_email")
     private String userEmail;
-
-//    public User(String userId, String userName, String userPwd, Date userBirth, String userPhone, String userRole, String userEmail) {
-//        this.userId = userId;
-//        this.userName = userName;
-//        this.userPwd = userPwd;
-//        this.userBirth = userBirth;
-//        this.userPhone = userPhone;
-//        this.userRole = userRole;
-//        this.userEmail = userEmail;
-//    }
 }

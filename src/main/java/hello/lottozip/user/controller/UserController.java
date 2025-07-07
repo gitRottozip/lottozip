@@ -20,10 +20,10 @@ public class UserController {
         return "main";
     }
 
-    @GetMapping("/login")
-    public String loginPage() {
-        return "login"; // login.html 템플릿
-    }
+//    @GetMapping("/login")
+//    public String loginPage() {
+//        return "login"; // login.html 템플릿
+//    }
 
 
     @GetMapping("/signup")
@@ -37,6 +37,6 @@ public class UserController {
         System.out.println("컨트롤러 진입: " + signUpDTO);
         User savedUser = userService.signUp(signUpDTO);
         System.out.println("서비스 완료, 저장된 유저: " + savedUser);
-        return "redirect:/main";
+        return "redirect:/login";
     }
 }

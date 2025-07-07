@@ -12,4 +12,9 @@ public class CommonController {
     public String header(){
         return "/component/header";
     }
+
+    @GetMapping("side")
+    public String side(){
+        return "/component/side";
+    }
 }
